@@ -1,0 +1,15 @@
+node_modules
+package-lock.json
+
+# parcel
+.parcel-cache
+development
+build
+dist
+parcel-bundle-reports
+
+# misc
+.idea
+.DS_Store
+
+npm-debug.log*
