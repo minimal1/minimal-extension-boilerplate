@@ -15,7 +15,7 @@ if(process.argv.length < 3)  {
 const projectName = process.argv[2];
 const currentPath = process.cwd();
 const projectPath = path.join(currentPath, projectName);
-const git_repo = 'https://github.com/minimal1/create-react-extension';
+const git_repo = 'https://github.com/minimal1/minimal-extension-boilerplate';
 
 // make project directory
 try {
@@ -40,7 +40,7 @@ async function main() {
         execSync('npm install');
 
         console.log('Removing useless files...');
-        execSync('npm rimraf ./.git');
+        execSync('npx rimraf ./.git');
         fs.rmdirSync(path.join(projectPath, 'bin'), { recursive: true });
 
         console.log('The installation is done, this is ready to use!');
