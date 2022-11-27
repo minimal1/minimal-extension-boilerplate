@@ -11,6 +11,7 @@ module.exports = {
       patterns: [
         {
           from: "static/*",
+          to: "[name][ext]",
           filter: (filepath) => {
             return !filepath.includes("index.html");
           },
