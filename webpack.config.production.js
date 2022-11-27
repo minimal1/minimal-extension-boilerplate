@@ -35,8 +35,10 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         {
-          from: "static/manifest.json",
-          to: "manifest.json",
+          from: "static/*",
+          filter: (filepath) => {
+            return !filepath.includes("index.html");
+          },
         },
       ],
     }),
