@@ -8,6 +8,6 @@ npx create-react-extension app-name
 
 
 ## TODO
-- [ ] Config boilerplate
+- [X] Config boilerplate
 - [ ] Upgrade bin script
 - [ ] Remove plate configuration code, packages
