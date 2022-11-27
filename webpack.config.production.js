@@ -1,37 +1,12 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 
+const baseConfig = require("./webpack.config.base");
+
 module.exports = {
+  ...baseConfig,
   mode: "production",
-  entry: {
-    main: "./src/index.tsx",
-    content: "./content/index.ts",
-  },
-  output: {
-    filename: (pathData) => {
-      return pathData.chunk.name === "main" ? "[name].js" : "content/[name].js";
-    },
-    path: path.resolve(__dirname, "dist"),
-    clean: true,
-  },
-  module: {
-    rules: [
-      {
-        test: /\.tsx?$/,
-        use: {
-          loader: "swc-loader",
-        },
-      },
-    ],
-  },
   plugins: [
-    new HtmlWebpackPlugin({
-      inject: true,
-      template: path.resolve(__dirname, "static/index.html"),
-      chunksSortMode: "none",
-      chunks: ["main"],
-    }),
+    ...baseConfig.plugins,
     new CopyPlugin({
       patterns: [
         {
