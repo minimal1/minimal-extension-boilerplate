@@ -1,5 +1,5 @@
 {
-  "name": "create-react-extension",
+  "name": "minimal-extension-boilerplate",
   "version": "0.0.1",
   "description": "React App boilerplate for Chrome Extension",
   "main": "index.js",
@@ -8,9 +8,9 @@
     "build": "parcel build index.js"
   },
   "bin": {
-    "create-react-extension": "./create-extension.js"
+    "minimal-extension-boilerplate": "./create-extension.js"
   },
-  "author": "",
+  "author": "minimal",
   "license": "ISC",
   "devDependencies": {
     "parcel-bundler": "^1.12.5"
